@@ -1,27 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../context/GlobalState'
+import { Book } from './Book';
 
 export const BookHistory = () => {
+    const {books} = useContext(GlobalContext);
+    console.log(books)
     return (
         <div className="book-history">
             <h2><u>Book History</u></h2>
-            
             <ul>
-                <li>
-                    React Novie to Nanjia
-                    <button className="del-btn">Delete</button>
-                </li>
-                <li>
-                    Java Script 
-                    <button className="del-btn">Delete</button>
-                </li>
-                <li>
-                    HTML & CSS
-                    <button className="del-btn">Delete</button>
-                </li>
-                <li>
-                    Agile Methodology
-                    <button className="del-btn">Delete</button>
-                </li>
+                {books.map( book => (
+                    <Book key={book.id} book = {book} />
+                ))}
             </ul>
         </div>
     )
