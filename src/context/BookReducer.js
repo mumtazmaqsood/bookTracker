@@ -7,15 +7,13 @@ export const BookReducer =  (state, action) => {
             return {
                 ...state,
                 books:[action.payload, ...state.books]
-            }
+            }   
         
         case 'DELETE_BOOK':
             return {    
                 ...state,
                 books: state.books.filter(book => book.id !== action.payload)
             }
-        
-
         default:
             return state;
     };
