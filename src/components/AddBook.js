@@ -12,6 +12,10 @@ export const AddBook = () => {
             id: new Date().getTime(),
             description
         }
+        /*if (description == ''){
+            alert("Enter book");
+        }
+        else*/
         addBook(newBook)
     }
 
@@ -23,7 +27,8 @@ export const AddBook = () => {
                            id="description"
                            value={description}
                            onChange={ (e) => setDescription(e.target.value)}
-                        placeholder="Add Book ..." 
+                           placeholder="Add Book ..." 
+                           required
                     />
                     <button>Add Book</button>
                 </div>
