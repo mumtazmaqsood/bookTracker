@@ -15,11 +15,6 @@ export default (state, action) => {
                 books: state.books.filter(book => book.id != action.payload)
             }
         
-        case 'SEARCH_BOOK':
-            return {
-                ...state,
-                books: state.books.filter(book => book.id == action.payload)
-            }
 
         default:
             return state;

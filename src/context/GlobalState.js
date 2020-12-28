@@ -34,10 +34,10 @@ export const GlobalProvider = ( {children}) => {
         })
     }
 
-    function searchBook(id) {
+    function searchBook(searchDescription) {
         dispatch({
             type: 'SEARCH_BOOK',
-            payload: id
+            payload: searchDescription
         })
     }
 
@@ -45,7 +45,8 @@ export const GlobalProvider = ( {children}) => {
         <GlobalContext.Provider value= {{
             books: state.books,
             addBook,
-            delBook
+            delBook,
+            searchBook
         }
         }>
             {children}

@@ -13,9 +13,6 @@ function App() {
         <div className="header">
         <h1>Book Reading Tracker</h1> 
         <h5>Reading material for Developers</h5>
-        <span>
-          <SearchBook />
-        </span>
         <hr />
         <BookHistory />
         <AddBook />
