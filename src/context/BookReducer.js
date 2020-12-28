@@ -1,6 +1,6 @@
 
 
-export default (state, action) => {
+export const BookReducer =  (state, action) => {
 
     switch(action.type){
         case 'ADD_BOOK': 
@@ -10,7 +10,7 @@ export default (state, action) => {
             }
         
         case 'DELETE_BOOK':
-            return {
+            return {    
                 ...state,
                 books: state.books.filter(book => book.id !== action.payload)
             }

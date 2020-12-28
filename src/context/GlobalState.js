@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react'
 
-import BookReducer from './BookReducer'
+import {BookReducer} from './BookReducer'
 
 const initialState ={ 
    books : [
