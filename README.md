@@ -1,7 +1,7 @@
 
 # URL of the App
 
-http://book-tracker.surge.sh/
+http://book_tracker.surge.sh/
 
 
 
