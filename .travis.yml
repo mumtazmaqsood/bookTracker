@@ -1,17 +1,18 @@
 language: node_js
 node_js:
   - "stable"
-
-script: 
-  - npm install
+cache:
+  directories:
+    - node_modules
+script:
   - npm test
   - npm run build
-
-deploy: 
+deploy:
   provider: surge
-  cleanup: true
-  domain: react-tdd.surge.sh
+  skip_cleanup: true
+  domain: boot_tracker.surge.sh
   project: ./build/
-
 on:
   branch: master
+
+
