@@ -10,9 +10,9 @@ script:
   - npm run build
 deploy:
   provider: surge
-  cleanup: true
-  domain: boot_tracker.surge.sh
+  cleanup: false
   project: ./build/
+  domain: boot_tracker.surge.sh
   on:
     branch: master
 
